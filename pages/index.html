@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>House Rental</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="filters">
+            <select id="houseType">
+                <option value="">House Type</option>
+                <option value="1 BHK">1 BHK</option>
+                <option value="2 BHK">2 BHK</option>
+                <option value="3 BHK">3 BHK</option>
+                <option value="1 RK">1 RK</option>
+            </select>
+            <select id="sortPrice">
+                <option value="">Sort by Price</option>
+                <option value="low-high">Low to High</option>
+                <option value="high-low">High to Low</option>
+            </select>
+            <select id="location">
+                <option value="">Location</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Pune">Pune</option>
+            </select>
+            <select id="rooms">
+                <option value="">Rooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <select id="washrooms">
+                <option value="">Washrooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <button id="filterBtn">Filter</button>
+        </div>
+        <div class="house-list">
+            <!-- House items will be displayed here -->
+            <div id="show-house" class="main-body grid grid-cols-3 gap-4 justify-center mx-20">
+
+            </div>
+        </div>
+        <div class="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="pageNumber">1</span>
+            <button id="nextPage">Next</button>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="cont ">
+        <div class="flex main-box gap-4 align-middle justify-center p-10">
+            <div></div>
+            <div class="img w-3/5">
+                <img src="https://media.istockphoto.com/id/1387649672/photo/modern-upscale-residential-building.jpg?s=2048x2048&w=is&k=20&c=0cvAmBDFKon3vJaI3496WndOE21lB3cMdK0BJLROfLc="
+                    alt="">
+            </div>
+            <div class="details">
+                <div class="text-4xl text-black font-bold mb-3">Stanza Living</div>
+                <div class="text-xl text-gray-700 text-black mb-3">A spacious 3bhk with a great view</div>
+                <div style="display: none;" id="admin-details" class="border border-black p-2 mb-3">
+                    <div class="para text-2xl text-black font-semibold">Owner contact details</div>
+                    <div class="text-xl name">Name : Rohit Kumar</div>
+                    <div class="text-xl name">Email : rohit@gmail.com</div>
+                    <div class="text-md text-gray-400 info">You and rohit both would have recived an email with each
+                        other contact details</div>
+                </div>
+                <div class="neighbourhood mb-3">
+                    <div class="neighbourhood-det">
+                        <div class="para text-2xl text-black mb-4">Important neighborhood</div>
+                    </div>
+                    <div class="allNeighbour flex flex-wrap gap-3">
+                        <div class="nieghbour-det-for-each bg-gray-300 rounded  p-2">
+                            <div>
+                                Kristu Jayanti Park
+                            </div>
+                            <div>Park</div>
+                            <div>1 km away</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flat-details">
+                    <div class="noOfRoom">Room : 2</div>
+                    <div class="noOfRoom">Washroom : 1</div>
+                    <div class="noOfRoom">Type : 2 BHK</div>
+                    <div class="noOfRoom">Location : Banglore</div>
+                </div>
+
+                <div class="buttons-and-all flex gap-6 align-middle mt-4">
+                    <button onclick="showAdminDetails()"
+                        class="bg-gray-900 text-gray-100 px-6 rounded-md text-lg py-2 hover:bg-gray-200 hover:text-black hover:border-black hover:border">CONTACT</button>
+                    <div class="flex">
+                        <button onclick="onRed()" id="like-btn"><i
+                                class="ri-heart-3-line text-5xl hover:text-red-700"></i></button>
+                        <div id="like-text" class="text-xl">2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let count = 2
+    function showAdminDetails() {
+        document.getElementById('admin-details').style.display = 'block'
+    }
+    function onRed() {
+
+        count += 1
+
+        const likeBtn = document.getElementById('like-btn')
+        const likeText = document.getElementById('like-text')
+        if (count % 2 != 0) {
+            likeBtn.innerHTML = `<i class="ri-heart-3-fill text-5xl text-red-700"></i>`
+            likeText.innerText = 3
+        }
+        else {
+            likeBtn.innerHTML = `<i class="ri-heart-3-line text-5xl hover:text-red-700"></i>`
+            likeText.innerText = 2
+        }
+    }
+</script>
+
+</html>
